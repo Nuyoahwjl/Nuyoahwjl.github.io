@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://nuyoahwjl.github.io/your-blog/5.png">
 <meta property="og:image" content="https://nuyoahwjl.github.io/your-blog/6.png">
 <meta property="article:published_time" content="2024-04-22T12:54:32.000Z">
-<meta property="article:modified_time" content="2024-04-22T16:36:44.983Z">
+<meta property="article:modified_time" content="2024-04-22T16:57:52.431Z">
 <meta property="article:author" content="chia.le">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nuyoahwjl.github.io/your-blog/1.png">
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          577 words
+          816 words
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          15 mins
+          21 mins
         
       </span>
     
@@ -317,7 +317,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-04-23T00:36:44+08:00
+                    Last updated on 2024-04-23T00:57:52+08:00
                   
                   
 
@@ -369,15 +369,26 @@
             <p><code>Hexo</code>默认的主题不太好看，不过官方提供了数百种主题供用户选择，可以根据个人喜好更换，官网主题点<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a>查看。个人比较喜欢<code>Fluid</code>，后面章节的功能也是以<code>Fluid</code>为基础进行讲解的。</p>
           </div>
 <h3 id="4-1-安装主题"><a href="#4-1-安装主题" class="headerlink" title="4.1 安装主题"></a>4.1 安装主题</h3><p>下载<a target="_blank" rel="noopener" href="https://gitcode.com/fluid-dev/hexo-theme-fluid/releases?utm_source=csdn_github_accelerator&isLogin=1">最新release版本</a>解压到<code>themes</code>目录，并将解压出的文件夹重命名为<code>fluid</code>。</p>
-<h3 id="4-2-指定主题"><a href="#4-2-指定主题" class="headerlink" title="4.2 指定主题"></a>4.2 指定主题</h3><p>如下修改<code>hexo-blog</code>博客目录中的<code>_config.yml</code>：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span>  <span class="hljs-comment"># 指定主题</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure>
+<h3 id="4-2-指定主题"><a href="#4-2-指定主题" class="headerlink" title="4.2 指定主题"></a>4.2 指定主题</h3><p>如下修改<code>Hexo</code>博客目录中的<code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span>  <span class="hljs-comment"># 指定主题</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>  <span class="hljs-comment"># 指定语言，会影响主题显示的语言</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="4-3-创建「关于页」"><a href="#4-3-创建「关于页」" class="headerlink" title="4.3 创建「关于页」"></a>4.3 创建「关于页」</h3><p>首次使用主题的「关于页」需要手动创建，在<code>cmd</code>中输入：</p>
+<h3 id="4-3-创建「关于页」"><a href="#4-3-创建「关于页」" class="headerlink" title="4.3 创建「关于页」"></a>4.3 创建「关于页」</h3><p>首次使用主题的「关于页」需要手动创建，在<code>cmd</code>窗口执行：</p>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type">page</span> about<br></code></pre></td></tr></table></figure>
 <p>创建成功后，编辑博客目录下<code>/source/about/index.md</code>，添加<code>layout</code>属性:</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">about</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-04-21 19:20:33</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-string">这里写关于页的正文，支持</span> <span class="hljs-string">Markdown,</span> <span class="hljs-string">HTML</span><br></code></pre></td></tr></table></figure>
-<p>-[x] <a href="#23-%E7%82%B9%E5%87%BBcreating-a-new-file%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E6%96%87%E4%BB%B6%E4%BD%9C%E4%B8%BA%E4%B8%BB%E9%A1%B5">about页配置指南</a></p>
-
+<ul>
+<li><strong>个性化：<a href="#23-%E7%82%B9%E5%87%BBcreating-a-new-file%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E6%96%87%E4%BB%B6%E4%BD%9C%E4%B8%BA%E4%B8%BB%E9%A1%B5">about页配置指南</a></strong></li>
+</ul>
+<h3 id="4-4-创建文章"><a href="#4-4-创建文章" class="headerlink" title="4.4 创建文章"></a>4.4 创建文章</h3><p>如下修改<code>Hexo</code>博客目录中的<code>_config.yml</code>，打开这个配置是为了在生成文章的时候生成一个同名的资源目录用于存放图片文件。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>在<code>cmd</code>窗口执行如下命令创建一篇新文章，名为《测试文章》</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type">post</span> 测试文章<br></code></pre></td></tr></table></figure>
+<ul>
+<li><strong>个性化：<a href="#23-%E7%82%B9%E5%87%BBcreating-a-new-file%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E6%96%87%E4%BB%B6%E4%BD%9C%E4%B8%BA%E4%B8%BB%E9%A1%B5">post页配置指南</a></strong></li>
+</ul>
+<h2 id="六、配置指南"><a href="#六、配置指南" class="headerlink" title="六、配置指南"></a>六、配置指南</h2><h3 id="关于指南"><a href="#关于指南" class="headerlink" title="关于指南"></a>关于指南</h3><div class="note note-success">
+            <h4 id="TIP"><a href="#TIP" class="headerlink" title="TIP"></a>TIP</h4><ul><li>本指南中提到的：”站点配置” 指的<code>Hexo</code>博客目录下的<code>_config.yml</code>，”主题配置” 指的是<code>theme/fluid/_config.yml</code>或者 <code>_config.fluid.yml</code>，注意区分；</li><li>本指南中提到的<code>source</code>目录都指的是博客目录下的<code>source</code>文件夹，不推荐修改主题内<code>source</code>目录；</li><li>每次无论<code>hexo g</code>或<code>hexo s</code>，都最好先使用<code>hexo clean</code>清除本地缓存；</li><li>页面结果以本地<code>hexo s</code>为准，部署后的异常大部分是线上缓存原因，在确认没有报错的情况下，等待若干时间后即可正常；</li></ul>
+          </div>
                 
               </div>
             

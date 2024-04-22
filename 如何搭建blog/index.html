@@ -24,8 +24,9 @@
 <meta property="og:description" content="本文介绍如何使用 Github pages + Hexo 搭建个人博客">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://nuyoahwjl.github.io/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAblog/1.png">
+<meta property="og:image" content="http://nuyoahwjl.github.io/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAblog/2.png">
 <meta property="article:published_time" content="2024-04-22T12:54:32.000Z">
-<meta property="article:modified_time" content="2024-04-22T14:05:05.958Z">
+<meta property="article:modified_time" content="2024-04-22T14:19:54.237Z">
 <meta property="article:author" content="chia.le">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://nuyoahwjl.github.io/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAblog/1.png">
@@ -70,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"nuyoahwjl.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"QHt3wZhAGQP06vrhSfSJDMm9-gzGzoHsz","app_key":"x0ayUENSFoiRPrQDWAV3UFS3","server_url":"https://qht3wzha.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"nuyoahwjl.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"QHt3wZhAGQP06vrhSfSJDMm9-gzGzoHsz","app_key":"x0ayUENSFoiRPrQDWAV3UFS3","server_url":"https://qht3wzha.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -238,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          109 words
+          136 words
         
       </span>
     
@@ -249,7 +250,7 @@
         
         
         
-          2 mins
+          4 mins
         
       </span>
     
@@ -312,7 +313,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-04-22T22:05:05+08:00
+                    Last updated on 2024-04-22T22:19:54+08:00
                   
                   
 
@@ -322,9 +323,14 @@
             
               <div class="markdown-body">
                 
-                <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a><strong>一、准备工作</strong></h2><h3 id="1-Github账号"><a href="#1-Github账号" class="headerlink" title="1.Github账号"></a><strong>1.Github账号</strong></h3><h5 id="nbsp-nbsp-nbsp-需要有一个GitHub账号，没有的话在官网注册，可参考Github账号申请。"><a href="#nbsp-nbsp-nbsp-需要有一个GitHub账号，没有的话在官网注册，可参考Github账号申请。" class="headerlink" title="&nbsp;&nbsp;&nbsp;需要有一个GitHub账号，没有的话在官网注册，可参考Github账号申请。"></a>&nbsp;&nbsp;&nbsp;需要有一个<code>GitHub</code>账号，没有的话在<a target="_blank" rel="noopener" href="https://github.com/">官网</a>注册，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119086305">Github账号申请</a>。</h5><h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><h5 id="nbsp-nbsp-nbsp-Hexo部署到Github时需要用到，可参考Git安装-Windows-。"><a href="#nbsp-nbsp-nbsp-Hexo部署到Github时需要用到，可参考Git安装-Windows-。" class="headerlink" title="&nbsp;&nbsp;&nbsp;Hexo部署到Github时需要用到，可参考Git安装(Windows)。"></a>&nbsp;&nbsp;&nbsp;Hexo部署到<code>Github</code>时需要用到，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119085413">Git安装(Windows)</a>。</h5><h3 id="3-安装NodeJS"><a href="#3-安装NodeJS" class="headerlink" title="3.安装NodeJS"></a>3.安装NodeJS</h3><h5 id="nbsp-nbsp-nbsp-Hexo是基于NodeJs写的，需要安装NodeJS和npm两个工具，可参考NodeJs安装及配置。"><a href="#nbsp-nbsp-nbsp-Hexo是基于NodeJs写的，需要安装NodeJS和npm两个工具，可参考NodeJs安装及配置。" class="headerlink" title="&nbsp;&nbsp;&nbsp;Hexo是基于NodeJs写的，需要安装NodeJS和npm两个工具，可参考NodeJs安装及配置。"></a>&nbsp;&nbsp;&nbsp;<code>Hexo</code>是基于<code>NodeJs</code>写的，需要安装<code>NodeJS</code>和<code>npm</code>两个工具，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40323256/article/details/100825982">NodeJs安装及配置</a>。</h5><h2 id="二、创建仓库"><a href="#二、创建仓库" class="headerlink" title="二、创建仓库"></a><strong>二、创建仓库</strong></h2><h5 id="nbsp-nbsp-nbsp-点击new-repositories新建一个仓库。"><a href="#nbsp-nbsp-nbsp-点击new-repositories新建一个仓库。" class="headerlink" title="&nbsp;&nbsp;&nbsp;点击new repositories新建一个仓库。"></a>&nbsp;&nbsp;&nbsp;点击<code>new repositories</code>新建一个仓库。</h5><html>
+                <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a><strong>一、准备工作</strong></h2><h3 id="1-Github账号"><a href="#1-Github账号" class="headerlink" title="1.Github账号"></a><strong>1.Github账号</strong></h3><h4 id="nbsp-nbsp-nbsp-需要有一个GitHub账号，没有的话在官网注册，可参考Github账号申请。"><a href="#nbsp-nbsp-nbsp-需要有一个GitHub账号，没有的话在官网注册，可参考Github账号申请。" class="headerlink" title="&nbsp;&nbsp;&nbsp;需要有一个GitHub账号，没有的话在官网注册，可参考Github账号申请。"></a>&nbsp;&nbsp;&nbsp;需要有一个<code>GitHub</code>账号，没有的话在<a target="_blank" rel="noopener" href="https://github.com/">官网</a>注册，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119086305">Github账号申请</a>。</h4><h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><h4 id="nbsp-nbsp-nbsp-Hexo部署到Github时需要用到，可参考Git安装-Windows-。"><a href="#nbsp-nbsp-nbsp-Hexo部署到Github时需要用到，可参考Git安装-Windows-。" class="headerlink" title="&nbsp;&nbsp;&nbsp;Hexo部署到Github时需要用到，可参考Git安装(Windows)。"></a>&nbsp;&nbsp;&nbsp;Hexo部署到<code>Github</code>时需要用到，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119085413">Git安装(Windows)</a>。</h4><h3 id="3-安装NodeJS"><a href="#3-安装NodeJS" class="headerlink" title="3.安装NodeJS"></a>3.安装NodeJS</h3><h4 id="nbsp-nbsp-nbsp-Hexo是基于NodeJs写的，需要安装NodeJS和npm两个工具，可参考NodeJs安装及配置。"><a href="#nbsp-nbsp-nbsp-Hexo是基于NodeJs写的，需要安装NodeJS和npm两个工具，可参考NodeJs安装及配置。" class="headerlink" title="&nbsp;&nbsp;&nbsp;Hexo是基于NodeJs写的，需要安装NodeJS和npm两个工具，可参考NodeJs安装及配置。"></a>&nbsp;&nbsp;&nbsp;<code>Hexo</code>是基于<code>NodeJs</code>写的，需要安装<code>NodeJS</code>和<code>npm</code>两个工具，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40323256/article/details/100825982">NodeJs安装及配置</a>。</h4><h2 id="二、创建仓库"><a href="#二、创建仓库" class="headerlink" title="二、创建仓库"></a><strong>二、创建仓库</strong></h2><h4 id="nbsp-nbsp-nbsp-点击new-repositories新建一个仓库。"><a href="#nbsp-nbsp-nbsp-点击new-repositories新建一个仓库。" class="headerlink" title="&nbsp;&nbsp;&nbsp;点击new repositories新建一个仓库。"></a>&nbsp;&nbsp;&nbsp;点击<code>new repositories</code>新建一个仓库。</h4><html>
 <img src="1.png" srcset="/img/loading.gif" lazyload alt=""style="display: block; margin: 0 auto;">
 </html>
+
+<h5 id="nbsp-nbsp-nbsp-填写仓库名，格式必须为-github-io，然后下滑点击Create-repository。"><a href="#nbsp-nbsp-nbsp-填写仓库名，格式必须为-github-io，然后下滑点击Create-repository。" class="headerlink" title="&nbsp;&nbsp;&nbsp;填写仓库名，格式必须为&lt;用户名&gt;.github.io，然后下滑点击Create repository。"></a>&nbsp;&nbsp;&nbsp;填写仓库名，格式必须为<code>&lt;用户名&gt;.github.io</code>，然后下滑点击<code>Create repository</code>。</h5><html>
+<img src="2.png" srcset="/img/loading.gif" lazyload alt=""style="display: block; margin: 0 auto;">
+</html>
+
                 
               </div>
             

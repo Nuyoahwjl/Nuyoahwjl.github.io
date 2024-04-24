@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://nuyoahwjl.github.io/img/hexo-cover.png">
 <meta property="article:published_time" content="2024-04-23T00:54:32.000Z">
-<meta property="article:modified_time" content="2024-04-23T11:40:52.187Z">
+<meta property="article:modified_time" content="2024-04-24T04:48:52.673Z">
 <meta property="article:author" content="chia.le">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nuyoahwjl.github.io/img/hexo-cover.png">
@@ -303,7 +303,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-04-23T19:40:52+08:00
+                    Last updated on 2024-04-24T12:48:52+08:00
                   
                   
 
@@ -355,7 +355,7 @@
             <p>以下内容均需在命令行提示符<code>cmd</code>中运行。<br>‘win + R ’ 打开命令行窗口，输入 ‘cmd’ 并回车。</p>
           </div>
 <h2 id="3-1-安装Hexo"><a href="#3-1-安装Hexo" class="headerlink" title="3.1 安装Hexo"></a><strong>3.1</strong> 安装<code>Hexo</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
-<h2 id="3-2-创建一个hexo-blog项目"><a href="#3-2-创建一个hexo-blog项目" class="headerlink" title="3.2 创建一个hexo-blog项目"></a><strong>3.2</strong> 创建一个<code>hexo-blog</code>项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init hexo-blog<br><span class="hljs-built_in">cd</span> hexo-blog<br>npm install<br>//默认在C盘创建<br></code></pre></td></tr></table></figure>
+<h2 id="3-2-创建hexo-blog项目"><a href="#3-2-创建hexo-blog项目" class="headerlink" title="3.2 创建hexo-blog项目"></a><strong>3.2</strong> 创建<code>hexo-blog</code>项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init hexo-blog<br><span class="hljs-built_in">cd</span> hexo-blog<br>npm install<br>//项目名称自拟<br>//默认在C盘创建<br></code></pre></td></tr></table></figure>
 <h2 id="3-3-本地启动"><a href="#3-3-本地启动" class="headerlink" title="3.3 本地启动"></a><strong>3.3</strong> 本地启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g<br>hexo server<br></code></pre></td></tr></table></figure>
 <p>浏览器访问 localhost:4000，查看默认风格。</p>
 <html>
@@ -467,7 +467,7 @@
 <h3 id="5-2-9-暗色模式"><a href="#5-2-9-暗色模式" class="headerlink" title="5.2.9 暗色模式"></a><strong>5.2.9 暗色模式</strong></h3><p>主题暗色模式，开启后菜单中会出现切换按钮。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">dark_mode:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">default:</span> <span class="hljs-string">auto</span><br></code></pre></td></tr></table></figure>
 <p><code>default</code>是暗色默认的模式，可选参数：<code>auto</code>&#x2F;<code>light</code>&#x2F;<code>dark</code>。</p>
-<p>选择<code>auto</code>时优先遵循 [prefers-color-scheme] (<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme)%EF%BC%8C%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%94%AF%E6%8C%81%E5%88%99%E6%8C%89%E7%94%A8%E6%88%B7%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4">https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme)，如果不支持则按用户本地时间</a> 18 点到次日 6 点之间进入暗色模式。</p>
+<p>选择<code>auto</code>时优先遵循 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a>，如果不支持则按用户本地时间 18 点到次日 6 点之间进入暗色模式。</p>
 <h2 id="5-3-首页"><a href="#5-3-首页" class="headerlink" title="5.3 首页"></a><strong>5.3 首页</strong></h2><h3 id="5-3-1-Slogan-打字机"><a href="#5-3-1-Slogan-打字机" class="headerlink" title="5.3.1 Slogan(打字机)"></a><strong>5.3.1 Slogan(打字机)</strong></h3><p>首页大图中的标题文字，可在<u><strong>主题配置</strong></u>中设定是否开启：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">index:</span><br>  <span class="hljs-attr">slogan:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">text:</span> <span class="hljs-string">这是一条</span> <span class="hljs-string">Slogan</span><br>    <span class="hljs-attr">api:</span><br>      <span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span><br>      <span class="hljs-attr">url:</span> <span class="hljs-string">&quot;https://v1.hitokoto.cn/&quot;</span><br>      <span class="hljs-attr">method:</span> <span class="hljs-string">&quot;GET&quot;</span><br>      <span class="hljs-attr">headers:</span> &#123;&#125;<br>      <span class="hljs-attr">keys:</span> [<span class="hljs-string">&quot;hitokoto&quot;</span>]<br></code></pre></td></tr></table></figure>
 <p>如果<code>text</code>为空则按站点配置的<code>subtitle</code>显示。</p>
@@ -548,7 +548,7 @@
 <p>更优雅的使用方式，是将脚注写在文末，比如：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs md">正文<br><br><span class="hljs-section">## 参考</span><br>[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">参考资料1</span><br>[<span class="hljs-symbol">^2</span>]: <span class="hljs-link">参考资料2</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="5-4-5-Tag插件"><a href="#5-4-5-Tag插件" class="headerlink" title="5.4.5 Tag插件"></a><strong>5.4.5 Tag插件</strong></h3><h4 id="便签"><a href="#便签" class="headerlink" title="便签"></a><em>便签</em></h4><p>在 markdown 中加入如下的代码来使用便签：</p>
+<h3 id="5-4-6-Tag插件"><a href="#5-4-6-Tag插件" class="headerlink" title="5.4.6 Tag插件"></a><strong>5.4.6 Tag插件</strong></h3><h4 id="便签"><a href="#便签" class="headerlink" title="便签"></a><em>便签</em></h4><p>在 markdown 中加入如下的代码来使用便签：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs md">&#123;% note success %&#125;<br>文字 或者 <span class="hljs-code">`markdown`</span> 均可<br>&#123;% endnote %&#125;<br></code></pre></td></tr></table></figure>
 <p>或者使用 HTML 形式：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-primary&quot;</span>&gt;</span>标签<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></td></tr></table></figure>

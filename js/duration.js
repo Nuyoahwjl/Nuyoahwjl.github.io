@@ -1,6 +1,6 @@
 !(function() {
     /** 计时起始时间，自行修改 **/
-    var start = new Date("2024/04/02 07:05:12");
+    var start = new Date("2024/04/22 07:05:12");
   
     function update() {
       var now = new Date();

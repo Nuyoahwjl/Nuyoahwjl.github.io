@@ -313,7 +313,49 @@
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> scipy.stats <span class="hljs-keyword">import</span> norm<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_probability</span>():<br>    mean = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;均值：&quot;</span>))<br>    std_dev = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;标准差：&quot;</span>))<br>    a_value = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;a值: &quot;</span>))<br>    probability = norm.cdf(a_value, mean, std_dev)<br>    <span class="hljs-built_in">print</span>(probability)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_a_value</span>():<br>    mean = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;均值：&quot;</span>))<br>    std_dev = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;标准差：&quot;</span>))<br>    p = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;概率值: &quot;</span>))<br>    a_value = norm.ppf(p, mean, std_dev)<br>    <span class="hljs-built_in">print</span>(a_value)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_probability_range</span>():<br>    mean = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;均值：&quot;</span>))<br>    std_dev = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;标准差：&quot;</span>))<br>    a_value = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;a值: &quot;</span>))<br>    b_value = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;b值: &quot;</span>))<br>    probability = norm.cdf(b_value, mean, std_dev) - norm.cdf(a_value, mean, std_dev)<br>    <span class="hljs-built_in">print</span>(probability)<br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;请选择功能：&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;1. 输入a,求P(X &lt;= a)的概率&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;2. 已知P(X &lt;= a)的概率,求a的值&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;3. 求P(a &lt;= X &lt;= b)的概率&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;0. 退出&quot;</span>)<br>    choice = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入选项：&quot;</span>)<br>    <br>    <span class="hljs-keyword">if</span> choice == <span class="hljs-string">&quot;1&quot;</span>:<br>        calculate_probability()<br>    <span class="hljs-keyword">elif</span> choice == <span class="hljs-string">&quot;2&quot;</span>:<br>        calculate_a_value()<br>    <span class="hljs-keyword">elif</span> choice == <span class="hljs-string">&quot;3&quot;</span>:<br>        calculate_probability_range()<br>    <span class="hljs-keyword">elif</span> choice == <span class="hljs-string">&quot;0&quot;</span>:<br>        <span class="hljs-keyword">break</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;无效的选项，请重新输入。&quot;</span>)<br></code></pre></td></tr></table></figure>
+                <div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">from</span> scipy.stats <span class="hljs-keyword">import</span> norm
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_probability</span>():
+    mean = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;均值：&quot;</span>))
+    std_dev = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;标准差：&quot;</span>))
+    a_value = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;a值: &quot;</span>))
+    probability = norm.cdf(a_value, mean, std_dev)
+    <span class="hljs-built_in">print</span>(probability)
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_a_value</span>():
+    mean = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;均值：&quot;</span>))
+    std_dev = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;标准差：&quot;</span>))
+    p = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;概率值: &quot;</span>))
+    a_value = norm.ppf(p, mean, std_dev)
+    <span class="hljs-built_in">print</span>(a_value)
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_probability_range</span>():
+    mean = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;均值：&quot;</span>))
+    std_dev = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;标准差：&quot;</span>))
+    a_value = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;a值: &quot;</span>))
+    b_value = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;b值: &quot;</span>))
+    probability = norm.cdf(b_value, mean, std_dev) - norm.cdf(a_value, mean, std_dev)
+    <span class="hljs-built_in">print</span>(probability)
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;请选择功能：&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;1. 输入a,求P(X &lt;= a)的概率&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;2. 已知P(X &lt;= a)的概率,求a的值&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;3. 求P(a &lt;= X &lt;= b)的概率&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;0. 退出&quot;</span>)
+    choice = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入选项：&quot;</span>)
+    
+    <span class="hljs-keyword">if</span> choice == <span class="hljs-string">&quot;1&quot;</span>:
+        calculate_probability()
+    <span class="hljs-keyword">elif</span> choice == <span class="hljs-string">&quot;2&quot;</span>:
+        calculate_a_value()
+    <span class="hljs-keyword">elif</span> choice == <span class="hljs-string">&quot;3&quot;</span>:
+        calculate_probability_range()
+    <span class="hljs-keyword">elif</span> choice == <span class="hljs-string">&quot;0&quot;</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;无效的选项，请重新输入。&quot;</span>)</code></pre></div>
                 
               </div>
             

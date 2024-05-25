@@ -16,23 +16,23 @@
   <meta name="author" content="chia.le">
   <meta name="keywords" content="">
   
-    <meta name="description" content="快速选择算法">
+    <meta name="description" content="哈密尔顿回路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quickselect">
-<meta property="og:url" content="http://nuyoahwjl.github.io/Quickselect/index.html">
+<meta property="og:title" content="Hamilton">
+<meta property="og:url" content="http://nuyoahwjl.github.io/Hamilton/index.html">
 <meta property="og:site_name" content="chia.le">
-<meta property="og:description" content="快速选择算法">
+<meta property="og:description" content="哈密尔顿回路">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://nuyoahwjl.github.io/img/Quickselect.png">
-<meta property="article:published_time" content="2024-05-25T08:00:35.000Z">
-<meta property="article:modified_time" content="2024-05-25T08:25:08.041Z">
+<meta property="og:image" content="https://nuyoahwjl.github.io/img/ztfb.png">
+<meta property="article:published_time" content="2024-05-25T08:26:09.000Z">
+<meta property="article:modified_time" content="2024-05-25T08:38:24.459Z">
 <meta property="article:author" content="chia.le">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nuyoahwjl.github.io/img/Quickselect.png">
+<meta name="twitter:image" content="https://nuyoahwjl.github.io/img/ztfb.png">
   
   
   
-  <title>Quickselect - chia.le</title>
+  <title>Hamilton - chia.le</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Quickselect"></span>
+            <span id="subtitle" data-typed-text="Hamilton"></span>
           
         </div>
 
@@ -226,7 +226,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-25 16:00" pubdate>
+        <time datetime="2024-05-25 16:26" pubdate>
           May 25, 2024 pm
         </time>
       </span>
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          816 words
+          591 words
         
       </span>
     
@@ -298,12 +298,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Quickselect</h1>
+            <h1 id="seo-header">Hamilton</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-05-25T16:25:08+08:00
+                    Last updated on 2024-05-25T16:38:24+08:00
                   
                   
 
@@ -313,87 +313,36 @@
             
               <div class="markdown-body">
                 
-                <p>为了求整型数组的中位数，并且效率要优于O(n^2)，同时不对全部数据进行排序，可以使用一种称为 <strong>选择算法</strong>（Selection Algorithm）的方法。最著名的选择算法是 <strong>快速选择算法</strong>（Quickselect），它的平均时间复杂度是O(n)。</p>
-<p>快速选择算法基于快速排序的分治思想。快速选择每次可以选定一个枢轴（pivot），然后通过一次划分（partition）将数组分成两部分，其中一部分所有元素都小于等于枢轴，另一部分所有元素都大于等于枢轴。根据枢轴的位置，可以确定中位数所在的部分，并递归进行选择。</p>
-<p>下面是实现快速选择算法来求中位数的C语言代码：</p>
-<div class="code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdlib.h&gt;</span></span>
+                <html>
+<img src="https://nuyoahwjl.github.io/img/hhh2.png" srcset="/img/loading.gif" lazyload alt=""style="display: block; margin: 0 auto;">
+</html>
 
-<span class="hljs-comment">// 辅助函数：交换两个元素</span>
-<span class="hljs-type">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">int</span> *a, <span class="hljs-type">int</span> *b)</span> &#123;
-    <span class="hljs-type">int</span> temp = *a;
-    *a = *b;
-    *b = temp;
-&#125;
-
-<span class="hljs-comment">// 分区函数：选择最后一个元素作为枢轴，返回枢轴的最终位置</span>
-<span class="hljs-type">int</span> <span class="hljs-title function_">partition</span><span class="hljs-params">(<span class="hljs-type">int</span> a[], <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> &#123;
-    <span class="hljs-type">int</span> pivot = a[high];
-    <span class="hljs-type">int</span> i = low - <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = low; j &lt; high; j++) &#123;
-        <span class="hljs-keyword">if</span> (a[j] &lt;= pivot) &#123;
-            i++;
-            swap(&amp;a[i], &amp;a[j]);
-        &#125;
-    &#125;
-    swap(&amp;a[i + <span class="hljs-number">1</span>], &amp;a[high]);
-    <span class="hljs-keyword">return</span> i + <span class="hljs-number">1</span>;
-&#125;
-
-<span class="hljs-comment">// 快速选择函数：在a[low...high]范围内寻找第k小的元素</span>
-<span class="hljs-type">int</span> <span class="hljs-title function_">quickSelect</span><span class="hljs-params">(<span class="hljs-type">int</span> a[], <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high, <span class="hljs-type">int</span> k)</span> &#123;
-    <span class="hljs-keyword">if</span> (low == high) &#123;
-        <span class="hljs-keyword">return</span> a[low];
-    &#125;
-
-    <span class="hljs-type">int</span> pivotIndex = partition(a, low, high);
-
-    <span class="hljs-comment">// 计算当前枢轴是第几个元素</span>
-    <span class="hljs-type">int</span> numElementsInLowPartition = pivotIndex - low + <span class="hljs-number">1</span>;
-
-    <span class="hljs-keyword">if</span> (numElementsInLowPartition == k) &#123;
-        <span class="hljs-keyword">return</span> a[pivotIndex];
-    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (k &lt; numElementsInLowPartition) &#123;
-        <span class="hljs-keyword">return</span> quickSelect(a, low, pivotIndex - <span class="hljs-number">1</span>, k);
-    &#125; <span class="hljs-keyword">else</span> &#123;
-        <span class="hljs-keyword">return</span> quickSelect(a, pivotIndex + <span class="hljs-number">1</span>, high, k - numElementsInLowPartition);
-    &#125;
-&#125;
-
-<span class="hljs-comment">// 主函数：求数组的中位数</span>
-<span class="hljs-type">int</span> <span class="hljs-title function_">MidValue</span><span class="hljs-params">(<span class="hljs-type">int</span> a[], <span class="hljs-type">int</span> n)</span> &#123;
-    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>) &#123;
-        <span class="hljs-comment">// 数组长度为奇数，中位数为第(n/2 + 1)小的元素</span>
-        <span class="hljs-keyword">return</span> quickSelect(a, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>, n / <span class="hljs-number">2</span> + <span class="hljs-number">1</span>);
-    &#125; <span class="hljs-keyword">else</span> &#123;
-        <span class="hljs-comment">// 数组长度为偶数，中位数为第(n/2)和第(n/2 + 1)小的元素的平均值</span>
-        <span class="hljs-type">int</span> mid1 = quickSelect(a, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>, n / <span class="hljs-number">2</span>);
-        <span class="hljs-type">int</span> mid2 = quickSelect(a, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>, n / <span class="hljs-number">2</span> + <span class="hljs-number">1</span>);
-        <span class="hljs-keyword">return</span> (mid1 + mid2) / <span class="hljs-number">2</span>;
-    &#125;
-&#125;
-
-<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;
-    <span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">7</span>, <span class="hljs-number">10</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">20</span>, <span class="hljs-number">15</span>&#125;;
-    <span class="hljs-type">int</span> n = <span class="hljs-keyword">sizeof</span>(a) / <span class="hljs-keyword">sizeof</span>(a[<span class="hljs-number">0</span>]);
-
-    <span class="hljs-type">int</span> median = MidValue(a, n);
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;数组的中位数是: %d\n&quot;</span>, median);
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
-
-<h3 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h3><ol>
-<li><strong>辅助函数</strong> <code>swap</code>：交换两个整数的值。</li>
-<li><strong>分区函数</strong> <code>partition</code>：实现快速排序中的分区步骤，选择最后一个元素作为枢轴。</li>
-<li><strong>快速选择函数</strong> <code>quickSelect</code>：在数组的指定范围内寻找第k小的元素。根据分区结果递归查找目标元素。</li>
-<li><strong>主函数</strong> <code>MidValue</code>：根据数组长度的奇偶性，调用<code>quickSelect</code>寻找中位数。如果长度为奇数，直接返回第<code>n/2 + 1</code>小的元素；如果为偶数，返回第<code>n/2</code>和第<code>n/2 + 1</code>小的元素的平均值。</li>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>13个人在有13个座位的圆桌上一起聚餐，要求每个人每天不与相同的人邻座，问最多可以聚几次餐（考虑哈密尔顿回路）</p>
+<h3 id="转化为图论问题"><a href="#转化为图论问题" class="headerlink" title="转化为图论问题"></a>转化为图论问题</h3><p>我们可以将这个问题转化为图论中的哈密尔顿回路问题：</p>
+<ol>
+<li><strong>顶点</strong>：13个人，每个人是一个顶点。</li>
+<li><strong>边</strong>：每次聚餐的座位安排，每条边连接两个相邻的人。</li>
 </ol>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>快速选择算法在最坏情况下时间复杂度是O(n^2)，但其平均时间复杂度为O(n)，在绝大多数情况下效率较高。</li>
-<li>该实现通过数组中的元素范围来递归查找目标中位数，而不需要对整个数组进行排序，从而满足题目的效率要求。</li>
+<p>在完全图 (K_{13}) 中，每个顶点（人）与其他所有顶点（人）都有一条边（可能成为邻座关系）。我们的目标是找到多条哈密尔顿回路，使得这些回路中的边（邻座关系）没有重复。</p>
+<h3 id="哈密尔顿回路"><a href="#哈密尔顿回路" class="headerlink" title="哈密尔顿回路"></a>哈密尔顿回路</h3><p>哈密尔顿回路是一条通过每个顶点一次且仅一次的闭合路径（即首尾相连）。在圆桌上，找到一条哈密尔顿回路相当于找到一个具体的座位安排。由于每次聚餐中座位安排都是圆桌的一种排列，且要求这些排列中的邻座关系不重复，我们需要找到不相交的哈密尔顿回路。</p>
+<h3 id="最大独立哈密尔顿回路数"><a href="#最大独立哈密尔顿回路数" class="headerlink" title="最大独立哈密尔顿回路数"></a>最大独立哈密尔顿回路数</h3><p>对于一个 (n) 顶点的完全图 (K_n)：</p>
+<ul>
+<li>如果 (n) 是奇数，则该图最多有 (\frac{n-1}{2}) 条相互独立的哈密尔顿回路（每条边只在一个回路中出现一次）。</li>
+<li>对于 (K_{13})，(n&#x3D;13)，所以最多有：</li>
 </ul>
-<p>此实现有效利用了快速排序的思想，确保了在大多数情况下的高效性，同时避免了全面排序带来的额外开销。</p>
+<p>[ \frac{13-1}{2} &#x3D; 6 ]</p>
+<p>条相互独立的哈密尔顿回路。</p>
+<h3 id="理解具体安排"><a href="#理解具体安排" class="headerlink" title="理解具体安排"></a>理解具体安排</h3><p>在每条哈密尔顿回路中，每个顶点（人）都有特定的邻座安排。这些安排在每条不同的回路中都不会重复。例如：</p>
+<ul>
+<li>回路1：1-2-3-…-13-1</li>
+<li>回路2：1-3-5-…-13-2-4-…-12-1</li>
+<li>等等</li>
+</ul>
+<p>通过这种方式，每个回路都表示一种不同的座位安排，并且确保每个人在每次聚餐中都有不同的邻座。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>经过上述分析和计算，13个人在有13个座位的圆桌上聚餐，并且每个人每天不与相同的人邻座，最多可以聚6次餐。这是因为我们能够找到6条独立的哈密尔顿回路，每条回路代表一次不同的聚餐安排。</p>
+<html>
+<img src="https://nuyoahwjl.github.io/img/hhh.png" srcset="/img/loading.gif" lazyload alt=""style="display: block; margin: 0 auto;">
+</html>
 
                 
               </div>
@@ -412,7 +361,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/code%F0%9F%92%BB/" class="category-chain-item">code💻</a>
+  <a href="/categories/tech%F0%9F%A7%A9/" class="category-chain-item">tech🧩</a>
   
   
 
@@ -432,8 +381,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Quickselect</div>
-      <div>http://nuyoahwjl.github.io/Quickselect/</div>
+      <div>Hamilton</div>
+      <div>http://nuyoahwjl.github.io/Hamilton/</div>
     </div>
     <div class="license-meta">
       
@@ -483,18 +432,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Hamilton/" title="Hamilton">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hamilton</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/books/" title="free books">
-                        <span class="hidden-mobile">free books</span>
+                      <a href="/Quickselect/" title="Quickselect">
+                        <span class="hidden-mobile">Quickselect</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

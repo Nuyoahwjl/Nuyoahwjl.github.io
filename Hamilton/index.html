@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://nuyoahwjl.github.io/img/hhh3.png">
 <meta property="article:published_time" content="2024-05-25T08:26:09.000Z">
-<meta property="article:modified_time" content="2024-05-26T13:18:02.100Z">
+<meta property="article:modified_time" content="2024-06-05T04:49:23.478Z">
 <meta property="article:author" content="chia.le">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nuyoahwjl.github.io/img/hhh3.png">
@@ -305,7 +305,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-05-26T21:18:02+08:00
+                    Last updated on 2024-06-05T12:49:23+08:00
                   
                   
 
@@ -325,15 +325,13 @@
 <li><strong>顶点</strong>：13个人，每个人是一个顶点。</li>
 <li><strong>边</strong>：每次聚餐的座位安排，每条边连接两个相邻的人。</li>
 </ol>
-<p>在完全图 (K_{13}) 中，每个顶点（人）与其他所有顶点（人）都有一条边（可能成为邻座关系）。我们的目标是找到多条哈密尔顿回路，使得这些回路中的边（邻座关系）没有重复。</p>
+<p>在完全图 $K_{13}$ 中，每个顶点（人）与其他所有顶点（人）都有一条边（可能成为邻座关系）。我们的目标是找到多条哈密尔顿回路，使得这些回路中的边（邻座关系）没有重复。</p>
 <h3 id="哈密尔顿回路"><a href="#哈密尔顿回路" class="headerlink" title="哈密尔顿回路"></a>哈密尔顿回路</h3><p>哈密尔顿回路是一条通过每个顶点一次且仅一次的闭合路径（即首尾相连）。在圆桌上，找到一条哈密尔顿回路相当于找到一个具体的座位安排。由于每次聚餐中座位安排都是圆桌的一种排列，且要求这些排列中的邻座关系不重复，我们需要找到不相交的哈密尔顿回路。</p>
-<h3 id="最大独立哈密尔顿回路数"><a href="#最大独立哈密尔顿回路数" class="headerlink" title="最大独立哈密尔顿回路数"></a>最大独立哈密尔顿回路数</h3><p>对于一个 (n) 顶点的完全图 (K_n)：</p>
+<h3 id="最大独立哈密尔顿回路数"><a href="#最大独立哈密尔顿回路数" class="headerlink" title="最大独立哈密尔顿回路数"></a>最大独立哈密尔顿回路数</h3><p>对于一个 $n$ 顶点的完全图 $K_n$：</p>
 <ul>
-<li>如果 (n) 是奇数，则该图最多有 (\frac{n-1}{2}) 条相互独立的哈密尔顿回路（每条边只在一个回路中出现一次）。</li>
-<li>对于 (K_{13})，(n&#x3D;13)，所以最多有：</li>
+<li>如果 $n$ 是奇数，则该图最多有 $\frac{n-1}{2}$条相互独立的哈密尔顿回路（每条边只在一个回路中出现一次）。</li>
+<li>对于 $K_{13}$，$n&#x3D;13$，所以最多有：$\frac{13-1}{2} &#x3D; 6$条相互独立的哈密尔顿回路。</li>
 </ul>
-<p>[ \frac{13-1}{2} &#x3D; 6 ]</p>
-<p>条相互独立的哈密尔顿回路。</p>
 <h3 id="理解具体安排"><a href="#理解具体安排" class="headerlink" title="理解具体安排"></a>理解具体安排</h3><p>在每条哈密尔顿回路中，每个顶点（人）都有特定的邻座安排。这些安排在每条不同的回路中都不会重复。例如：</p>
 <ul>
 <li>回路1：1-2-3-…-13-1</li>
@@ -429,6 +427,23 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Quickselect/" title="Quickselect">
+                        <span class="hidden-mobile">Quickselect</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 

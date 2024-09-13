@@ -1,4 +1,4 @@
-### 在 ` powerShell`/`cmd` 中执行以下命令
+### 在 `powerShell`/`cmd` 执行以下命令
 ### **😈打开本地文件**
 ``` bash
 cd "D:\hexo-blog"

@@ -11,3 +11,15 @@ hexo new post name
 ``` bash
 hexo g -d
 ```
+<br>
+
+### **⚠️warning⚠️**
+若你的文件放在D盘目录下,而cmd是 
+```
+C:\Users\...>
+```
+则需执行
+```
+cd "D:\hexo-blog"
+```
+或先切换到D盘目录

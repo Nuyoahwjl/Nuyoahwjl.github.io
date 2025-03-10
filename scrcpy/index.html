@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://nuyoahwjl.github.io/img/le.png">
+  <link rel="icon" href="https://nuyoahwjl.github.io/img/le.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="chia.le">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="scrcpy 是一个开源的应用程序，可以让你通过电脑控制和显示Android设备的屏幕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="scrcpy">
+<meta property="og:url" content="http://nuyoahwjl.github.io/scrcpy/index.html">
+<meta property="og:site_name" content="chia.le">
+<meta property="og:description" content="scrcpy 是一个开源的应用程序，可以让你通过电脑控制和显示Android设备的屏幕">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://nuyoahwjl.github.io/img/Scrcpy-commands.jpg">
+<meta property="article:published_time" content="2025-03-10T14:33:39.215Z">
+<meta property="article:modified_time" content="2024-04-29T15:04:28.016Z">
+<meta property="article:author" content="chia.le">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nuyoahwjl.github.io/img/Scrcpy-commands.jpg">
+  
+  
+  
+  <title>scrcpy - chia.le</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4519271_73nvj6tj9am.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"nuyoahwjl.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"QHt3wZhAGQP06vrhSfSJDMm9-gzGzoHsz","app_key":"x0ayUENSFoiRPrQDWAV3UFS3","server_url":"https://qht3wzha.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>chia.le</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://nuyoahwjl.github.io/img/Post.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="scrcpy"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-10 22:33" pubdate>
+          March 10, 2025 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          669 words
+        
+      </span>
+    
+
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> views
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">scrcpy</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    Last updated on 2024-04-29T23:04:28+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p><code>scrcpy</code> 是一个开源的应用程序，可以让你通过电脑控制和显示Android设备的屏幕。这里是如何在Windows系统上安装 <code>scrcpy</code> 的步骤：</p>
+<h2 id="1-下载和安装Scoop（如果你还没有Scoop）："><a href="#1-下载和安装Scoop（如果你还没有Scoop）：" class="headerlink" title="1. 下载和安装Scoop（如果你还没有Scoop）："></a>1. <strong>下载和安装Scoop</strong>（如果你还没有Scoop）：</h2><p>   打开命令提示符（CMD）并运行以下命令安装 Scoop（首先需要确保已启用PowerShell的执行策略）：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+iwr -useb get.scoop.sh | iex</code></pre></div>
+
+<h2 id="2-通过Scoop安装scrcpy："><a href="#2-通过Scoop安装scrcpy：" class="headerlink" title="2. 通过Scoop安装scrcpy："></a>2. <strong>通过Scoop安装scrcpy</strong>：</h2><p>   在命令提示符中运行以下命令：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scoop install scrcpy</code></pre></div>
+
+<h2 id="3-安装ADB（如果还没安装）："><a href="#3-安装ADB（如果还没安装）：" class="headerlink" title="3. 安装ADB（如果还没安装）："></a>3. <strong>安装ADB</strong>（如果还没安装）：</h2><div class="code-wrapper"><pre><code class="hljs bash">scoop install adb</code></pre></div>
+
+<h2 id="4-开启“USB调试”"><a href="#4-开启“USB调试”" class="headerlink" title="4. 开启“USB调试”"></a>4. <strong>开启“USB调试”</strong></h2><p>   确保在连接设备前在Android设备上开启了USB调试模式，通常在“设置” -&gt; “系统” -&gt; “关于手机”里连续点击“版本号”七次后返回“系统”中出现“开发者选项”，在其中开启“USB调试”。</p>
+<h2 id="5-基本使用"><a href="#5-基本使用" class="headerlink" title="5.基本使用"></a>5.基本使用</h2><h4 id="启用镜像"><a href="#启用镜像" class="headerlink" title="启用镜像"></a><u><em>启用镜像</em></u></h4><p>首先确保你的设备已经开启了USB调试，然后通过USB线连接到电脑。在电脑上打开命令提示符&#x2F;PowerShell，输入以下命令启动 <code>scrcpy</code>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy</code></pre></div>
+
+<h4 id="无线连接"><a href="#无线连接" class="headerlink" title="无线连接"></a><u><em>无线连接</em></u></h4><p>要通过无线网络使用 <code>scrcpy</code>，首先需要连接USB线，然后在命令行中设置设备用于监听TCP&#x2F;IP连接：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">adb tcpip 5555</code></pre></div>
+
+<p>找出你的Android设备的IP地址，然后断开USB连接，使用以下命令连接：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">adb connect DEVICE_IP:5555
+scrcpy</code></pre></div>
+
+<p>替换 <code>DEVICE_IP</code> 为你的设备的实际IP地址。</p>
+<h4 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a><u><em>常用选项</em></u></h4><ul>
+<li><p><strong>调整分辨率</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --max-size 1024</code></pre></div>
+
+<p>这将限制设备镜像的最大宽度或高度为1024像素。</p>
+</li>
+<li><p><strong>设置比特率</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --bit-rate 2M</code></pre></div>
+
+<p>这将设置传输数据的比特率为2 Mbps。</p>
+</li>
+<li><p><strong>全屏模式</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --fullscreen</code></pre></div>
+
+<p>或者使用快捷键 <code>Ctrl</code> + <code>f</code> 在全屏和窗口模式之间切换。</p>
+</li>
+<li><p><strong>只读模式</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --no-control</code></pre></div>
+
+<p>这将禁止从电脑端控制设备。</p>
+</li>
+<li><p><strong>裁剪设备屏幕</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --crop 1920:1080:0:0</code></pre></div>
+
+<p>这将只显示设备屏幕的一部分，格式为 <code>宽度:高度:左:顶</code>。</p>
+</li>
+<li><p><strong>保持屏幕常亮</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --stay-awake</code></pre></div>
+
+<p>这将在连接时保持设备屏幕常亮。</p>
+</li>
+<li><p><strong>显示触摸</strong>：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --show-touches</code></pre></div>
+
+<p>这将在屏幕上显示物理触摸的位置。</p>
+</li>
+<li><p><strong>息屏显示</strong></p>
+<div class="code-wrapper"><pre><code class="hljs bash">scrcpy --turn-screen-off</code></pre></div>
+
+<p>这将在连接时保持设备息屏。</p>
+</li>
+</ul>
+<h4 id="键盘快捷键"><a href="#键盘快捷键" class="headerlink" title="键盘快捷键"></a><u><em>键盘快捷键</em></u></h4><ul>
+<li><code>Ctrl</code> + <code>o</code> ：关闭或打开设备屏幕。</li>
+<li><code>Ctrl</code> + <code>p</code> ：暂停或继续设备屏幕镜像。</li>
+<li><code>Ctrl</code> + <code>r</code> ：旋转设备屏幕显示。</li>
+<li><code>Ctrl</code> + <code>h</code>&#x2F;<code>Home</code> ：模拟点击Home键。</li>
+<li><code>Ctrl</code> + <code>b</code>&#x2F;<code>Back</code> ：模拟点击返回键。</li>
+<li><code>Ctrl</code> + <code>m</code>&#x2F;<code>Menu</code> ：模拟点击菜单键。</li>
+<li><code>Ctrl</code> + <code>s</code> ：截图保存至默认目录。</li>
+<li><code>Ctrl</code> + <code>Shift</code> + <code>s</code> ：截图并复制到剪贴板。</li>
+</ul>
+<p><code>scrcpy</code> 提供了非常丰富的功能，这些只是其中的一部分。你可以通过运行 <code>scrcpy --help</code> 查看更多可用的选项。</p>
+<h2 id="6-效果展示"><a href="#6-效果展示" class="headerlink" title="6.效果展示"></a>6.<strong>效果展示</strong></h2><html>
+<img src="https://nuyoahwjl.github.io/img/scrcpy.png" srcset="/img/loading.gif" lazyload alt=""style="display: block; margin: 0 auto;">
+</html>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/tech%F0%9F%A7%A9/" class="category-chain-item">tech🧩</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>scrcpy</div>
+      <div>http://nuyoahwjl.github.io/scrcpy/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>chia.le</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>March 10, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - Share-alike">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/hello-world/" title="Hello World">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/RSA/" title="RSA">
+                        <span class="hidden-mobile">RSA</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入运行时长...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        🚀总访问量 
+        <span id="leancloud-site-pv"></span>
+         次🚀
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        😶‍🌫️总访客数 
+        <span id="leancloud-site-uv"></span>
+         人😶‍🌫️
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'en'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/en.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
